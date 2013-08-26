@@ -1,0 +1,8 @@
+digraph finite_state_machine {
+
+	node [shape = doublecircle]; state_0;
+	node [shape = circle]; state_1;
+	state_0 -> state_1 [ label = "ZERO_EVENT/action_one" ];
+	state_1 -> state_2 [ label = "ZERO_EVENT/action_two,action_three" ];
+	state_2 -> state_1 [ label = "SINGLE_EVENT/action_four" ];
+}
