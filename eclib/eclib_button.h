@@ -34,25 +34,26 @@ typedef enum eclib_button_reason {
 	ECLIB_BUTTON_STICK						//!< stick
 } eclib_button_reason_t;
 
+/// @brief callback handler for event notification
 typedef void (*eclib_button_callback_ptr_t)(uint8_t buttonId, eclib_button_reason_t reason);
 
 typedef struct eclib_button_definition_t {
-	eclib_timer_t 								shortClick;
-	eclib_timer_t 								normalClick;
-	eclib_timer_t 								longClick;
-	eclib_timer_t								autoRepeat;
-	eclib_timer_t								stick;
-	uint32_t									eventMask;
-	eclib_button_callback_ptr_t					callback;
+	eclib_timer_t 								shortClick;			//!< short click timeout
+	eclib_timer_t 								normalClick;		//!< normal click timeout
+	eclib_timer_t 								longClick;			//!< long click timeout
+	eclib_timer_t								autoRepeat;			//!< auto-repeat click timeout, after normal click
+	eclib_timer_t								stick;				//!< stick failure timeout
+	uint32_t									eventMask;			//!< mask for expected button events
+	eclib_button_callback_ptr_t					callback;			//!< callback function for event notification
 } eclib_button_definition_t;
 typedef eclib_button_definition_t * 		eclib_button_definition_ptr_t;
 
 typedef struct eclib_button_state_t {
-	eclib_timer_t								lastChange;
-	eclib_timer_t								autoRepeatChange;
-	eclib_button_status_t						state;
-	eclib_button_status_t						value;
-	uint32_t									eventMask;
+	eclib_timer_t								lastChange;			//!< last update of the state
+	eclib_timer_t								autoRepeatChange;	//!< last update for auto-repeat
+	eclib_button_status_t						state;				//!< state of the button
+	eclib_button_status_t						value;				//!< value of the button state
+	uint32_t									eventMask;			//!< active mask
 } eclib_button_state_t;
 typedef eclib_button_state_t *				eclib_button_state_ptr_t;
 
