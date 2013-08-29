@@ -8,6 +8,13 @@
 #include <eclib/eclib_types.h>
 #include <eclib/eclib_queue.h>
 
+#define ECLIB_QUEUE_VERSION_ID	0x0100
+
+uint32_t eclib_queue_version() {
+	return ECLIB_QUEUE_VERSION_ID;
+}
+
+
 eclib_status_t eclib_queue_init( eclib_queue_t * pQueue, void * pBuffer, uint16_t nSize, uint16_t nUnits )
 {
 	eclib_status_t eStatus = ECLIB_NULL_POINTER;

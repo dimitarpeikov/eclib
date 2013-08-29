@@ -45,6 +45,13 @@ typedef eclib_queue_t *				eclib_queue_ptr_t;
 	}
 
 /*!
+ * @fn eclib_queue_version( )
+ * @return	Returns library version number
+ */
+uint32_t eclib_queue_version();
+
+
+/*!
  * \fn eclib_queue_init(eclib_queue_t * pQueue, void * pBuffer, uint16_t nSize, uint16_t nUnits)
  * \brief initialize queue buffer in RAM
  * \param pQueue pointer to eclib_queue_t structure

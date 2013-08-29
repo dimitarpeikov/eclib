@@ -37,6 +37,12 @@ typedef eclib_set_t *				eclib_set_ptr_t;
 	eclib_set_ptr_t name = (eclib_set_ptr_t) &ECLIB_SET_BUFFER_DECLARE(name);
 
 /*!
+ * @fn eclib_set_version( )
+ * @return	Returns library version number
+ */
+uint32_t eclib_set_version();
+
+/*!
  * @fn eclib_set_init( eclib_set_ptr_t pSet, uint16_t nInitUnitSize, uint16_t nInitCount )
  * @brief	initialize set structure in RAM
  * @param	nInitUnitSize number of items in the set

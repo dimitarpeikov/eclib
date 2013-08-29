@@ -8,6 +8,12 @@
 #include <eclib/eclib_types.h>
 #include <eclib/eclib_array.h>
 
+#define ECLIB_ARRAY_VERSION_ID	0x0100
+
+uint32_t eclib_array_version() {
+	return ECLIB_ARRAY_VERSION_ID;
+}
+
 eclib_status_t	eclib_array_init( eclib_array_t * pArray, void * pBuffer, uint16_t nUnits, uint16_t nSize )
 {
 	eclib_status_t	eStatus = ECLIB_NULL_POINTER;

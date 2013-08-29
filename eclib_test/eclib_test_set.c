@@ -31,6 +31,9 @@ uint16_t eclib_test_set(void) {
 	uint16_t		nErrors = 0;
 	uint16_t		i = 0;
 	eclib_status_t	eStatus = ECLIB_OK;
+	uint32_t		eclib_set_version_id = eclib_set_version();
+
+	printf("%s: %s\tv.%x\n", __FILE__, __DATE__, eclib_set_version_id);
 
 	eclib_set_init(u16Set, sizeof(uint16_t), 10);
 	eclib_set_init(u16Set2, sizeof(uint16_t), 10);
@@ -38,8 +41,6 @@ uint16_t eclib_test_set(void) {
 	eclib_set_dump(u16Set);
 	eclib_set_dump(u16Set2);
 	eclib_set_dump(u16Set3);
-
-	printf("%s: %s\n", __FILE__, __DATE__);
 
  	for (i = 0; i < 10; i ++) {
 		eStatus = eclib_set_add(u16Set, &i);

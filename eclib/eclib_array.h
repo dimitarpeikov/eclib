@@ -49,6 +49,11 @@ typedef eclib_array_t *				eclib_array_ptr_t;
 
 
 
+/*!
+ * @fn eclib_array_version( )
+ * @return	Returns library version number
+ */
+uint32_t eclib_array_version();
 
 /*!
  * @fn eclib_array_init( eclib_array_t * pArray, void * pBuffer, uint16_t nUnits, uint16_t nSize )

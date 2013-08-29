@@ -8,11 +8,20 @@
 #ifndef __ECLIB_TIMER_H__
 #define __ECLIB_TIMER_H__
 
-void      eclib_timer_start_timer(uint32_ptr_t pTimer);
-void      eclib_timer_stop_timer(uint32_ptr_t pTimer);
-uint32_t  eclib_timer_get_elapsed_time(uint32_ptr_t pTimer);
-uint32_t  eclib_timer_is_elapsed_timeout(uint32_ptr_t pTtimer, uint32_t msTimeout);
-uint32_t  eclib_timer_is_timer_started(uint32_ptr_t pTimer);
-uint32_t  eclib_timer_add_delta(uint32_ptr_t pTimer, uint32_t delta);
+typedef uint32_t		eclib_timer_t;
+typedef uint32_ptr_t	eclib_timer_ptr_t;
+
+/*!
+ * @fn eclib_timer_version( )
+ * @return	Returns library version number
+ */
+uint32_t eclib_timer_version();
+
+eclib_status_t      eclib_timer_start_timer(eclib_timer_ptr_t pTimer);
+eclib_status_t      eclib_timer_stop_timer(eclib_timer_ptr_t pTimer);
+eclib_timer_t  eclib_timer_get_elapsed_time(eclib_timer_ptr_t pTimer);
+uint8_t  eclib_timer_is_elapsed_timeout(eclib_timer_ptr_t pTtimer, eclib_timer_t msTimeout);
+uint8_t  eclib_timer_is_timer_started(eclib_timer_ptr_t pTimer);
+eclib_timer_t  eclib_timer_add_delta(eclib_timer_ptr_t pTimer, eclib_timer_t delta);
 
 #endif

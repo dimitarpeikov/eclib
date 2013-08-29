@@ -8,15 +8,13 @@
 #include <eclib/eclib_types.h>
 #include <stdio.h>
 
-/* test funtions */
-#if 0
+/* test functions */
 uint16_t eclib_test_queue(void);
 uint16_t eclib_test_queue2(void);
 uint16_t eclib_test_array(void);
 uint16_t eclib_test_set(void);
-uint16_t eclib_test_button(void);
-#endif
 uint16_t eclib_test_set_2(void);
+uint16_t eclib_test_button(void);
 
 int main()
 {
@@ -30,12 +28,11 @@ int main()
 	nErrorsFound += eclib_test_queue();
 	nErrorsFound += eclib_test_queue2();
 	nErrorsFound += eclib_test_array();
-
 	nErrorsFound += eclib_test_set();
-	nErrorsFound += eclib_test_button();
-#endif
 	nErrorsFound += eclib_test_set_2();
+#endif
 
+	nErrorsFound += eclib_test_button();
 
 	return 0;
 }

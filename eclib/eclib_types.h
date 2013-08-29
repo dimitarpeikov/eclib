@@ -10,29 +10,30 @@
 
 typedef unsigned char	uint8_t;
 typedef unsigned short	uint16_t;
-typedef unsigned int		uint32_t;
+typedef unsigned int	uint32_t;
 
 typedef signed char		int8_t;
-typedef signed short		int16_t;
-typedef signed int			int32_t;
+typedef signed short	int16_t;
+typedef signed int		int32_t;
 
-typedef uint8_t *       		uint8_ptr_t;
-typedef uint16_t *      	uint16_ptr_t;
-typedef uint32_t *      	uint32_ptr_t;
+typedef uint8_t *       uint8_ptr_t;
+typedef uint16_t *      uint16_ptr_t;
+typedef uint32_t *      uint32_ptr_t;
 
-typedef int8_t *        		int8_ptr_t;
-typedef int16_t *       		int16_ptr_t;
-typedef int32_t *       		int32_ptr_t;
+typedef int8_t *        int8_ptr_t;
+typedef int16_t *       int16_ptr_t;
+typedef int32_t *       int32_ptr_t;
 
 /*!
  * @enum eclib_signature_enum
  */
 enum eclib_signature_enum
 {
-	ECLIB_SIGNATURE_EMPTY = 0,		//!< no signature
-	ECLIB_SIGNATURE_QUEUE = 0x1234,	//!< QUEUE signature
-	ECLIB_SIGNATURE_ARRAY = 0x2345,	//!< ARRAY signature
-	ECLIB_SIGNATURE_SET   = 0x3456	//!< SET signature
+	ECLIB_SIGNATURE_EMPTY	= 0,		//!< no signature
+	ECLIB_SIGNATURE_QUEUE	= 0x1234,	//!< QUEUE signature
+	ECLIB_SIGNATURE_ARRAY	= 0x2345,	//!< ARRAY signature
+	ECLIB_SIGNATURE_SET		= 0x3456,	//!< SET signature
+	ECLIB_SIGNATURE_BUTTON	= 0x4567	//!< BUTTON signature
 };
 /*!
  * @typedef eclib_signature_t

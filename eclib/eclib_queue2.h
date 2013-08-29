@@ -47,6 +47,13 @@ typedef eclib_queue2_t *			eclib_queue2_ptr_t;
 	}
 
 /*!
+ * @fn eclib_queue2_version( )
+ * @return	Returns library version number
+ */
+uint32_t eclib_queue2_version();
+
+
+/*!
  * \fn eclib_queue2_init(eclib_queue2_ptr_t pQueue, void * pBuffer, uint16_t nSize, uint16_t nUnits)
  * \brief initialize queue buffer in RAM
  * \param pQueue pointer to eclib_queue2_t structure

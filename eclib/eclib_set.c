@@ -9,6 +9,12 @@
 #include <eclib/eclib_set.h>
 #include <stdio.h>
 
+#define ECLIB_SET_VERSION_ID	0x0100
+
+uint32_t eclib_set_version() {
+	return ECLIB_SET_VERSION_ID;
+}
+
 eclib_status_t	eclib_set_init( eclib_set_ptr_t pSet, uint16_t nInitUnitSize, uint16_t nInitCount )
 {
 	eclib_status_t	eStatus = ECLIB_NULL_POINTER;

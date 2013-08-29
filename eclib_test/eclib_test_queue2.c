@@ -30,8 +30,9 @@ uint16_t eclib_test_queue2(void)
 	uint32_t	start_time = 0L;
 	uint32_t	end_time = 0L;
 	eclib_status_t	eStatus;
+	uint32_t	eclib_queue2_version_id = eclib_queue2_version();
 
-	printf("%s: %s\n", __FILE__, __DATE__);
+	printf("%s: %s\tv.%x\n", __FILE__, __DATE__, eclib_queue2_version_id);
 	/* check for push properly data into queue */
 	nErrorsFound = 0;
 	for ( i = 0; i <= ECLIB_QUEUE_TEST_UNITS1; i ++)
@@ -118,7 +119,6 @@ uint16_t eclib_test_queue2(void)
 	}
 	end_time = clock();
 	printf("push<%d>( %d , %d )\t%d\n", i, n, eStatus, end_time-start_time);
-	printf("%d\t%d\n", end_time-start_time, nErrorsFound);
 
 	nErrorsFound = 0;
 	start_time = clock();
@@ -140,7 +140,6 @@ uint16_t eclib_test_queue2(void)
 	}
 	end_time = clock();
 	printf("pop<%d>( %d , %d )\t%d\n", i, n, eStatus, end_time-start_time);
-	printf("%d\t%d\n", end_time-start_time, nErrorsFound);
 
 	return nErrors;
 }
