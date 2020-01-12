@@ -6,9 +6,11 @@ LDFLAGS = -L ../eclib -leclib
 OBJS = ${SRCS:%.c=%.o}
 DEPS = ${SRCS:%.c=%.d}
 
-execute:	$(TARGET)
+test:	$(TARGET)
 	./$(TARGET)
+
 all:	$(TARGET)
+
 clean:
 	$(RM) $(TARGET) $(OBJS) *~
 
@@ -21,7 +23,7 @@ $(TARGET): $(OBJS)
 .c.d:
 	$(CC) -M -I ../ $(CFLAGS) -o $@ $<
 
-.PHONY: clean all execute
+.PHONY: clean all test
 .SUFFIXES: .d
 
 -include $(DEPS)
