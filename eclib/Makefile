@@ -17,8 +17,10 @@ $(TARGET): $(OBJS)
 
 .c.d:
 	$(CC) -M -I ../ $(CFLAGS) -o $@ $<
+	
+test:
 
-.PHONY: clean all
+.PHONY: clean all test
 .SUFFIXES: .d
 
 -include $(DEPS)
