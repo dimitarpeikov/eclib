@@ -1,4 +1,4 @@
-all: build test
+all:  build test
 
 build:
   $(MAKE) -C eclib all
